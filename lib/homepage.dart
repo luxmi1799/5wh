@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wh_app/homeactivity.dart';
 import 'package:wh_app/login.dart';
+import 'package:wh_app/sell_story.dart';
 
 class home extends StatefulWidget{
   @override
@@ -15,7 +16,7 @@ class _home extends State<home>{
   int _currentIndex = 0;
   List<Widget> tabs = [
   homeactivity(),
-  login(),
+  sell_story(),
   login(),
   login(),
   login(),
@@ -34,27 +35,6 @@ class _home extends State<home>{
   @override
   Widget build(BuildContext context) {
      return Scaffold(
-       appBar:  AppBar(
-         backgroundColor: Colors.transparent,
-         elevation: 0.0,
-         leading: Padding(
-           padding: const EdgeInsets.only(left: 15.0),
-           child: LimitedBox(
-             child: SvgPicture.asset(
-               'assets/menu.svg',
-               color: Colors.black,
-             ),
-           ),
-         ),
-         actions: [
-           Padding(
-             padding: const EdgeInsets.only(right: 0.0),
-             child:
-                 Image.asset("assets/notify.png",width: 60,height: 40,),
-                // Icon(Icons.notification_add,color: Colors.white,)
-           ),
-         ],
-       ),
        bottomNavigationBar: _buildBlurEffect(),
        body:tabs[_currentIndex],
      );
