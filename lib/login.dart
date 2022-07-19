@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
+import 'forgetpwsd.dart';
+import 'homepage.dart';
 import 'joinus.dart';
 
 
@@ -162,11 +164,16 @@ class _login extends State<login> {
                           ),),
                         ],
                       ),
-                      const Text("Forgot Password?",style: TextStyle(
-                          color: Colors.grey,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 15
-                      ),),
+                      InkWell(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => forget()));
+                        },
+                        child: const Text("Forgot Password?",style: TextStyle(
+                            color: Colors.grey,
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15
+                        ),),
+                      ),
 
                     ],
                   ),
@@ -185,7 +192,7 @@ class _login extends State<login> {
                       ),
                       child: FlatButton(
                         onPressed: (){
-                          //Navigator.of(context).push(MaterialPageRoute(builder: (context) => home_page()));
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => home()));
                         },
                         child: Text("SIGN IN",
                           textAlign: TextAlign.center,
