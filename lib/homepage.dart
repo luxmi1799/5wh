@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:wh_app/homeactivity.dart';
 import 'package:wh_app/login.dart';
+import 'package:wh_app/marketplace.dart';
+import 'package:wh_app/mystory.dart';
 import 'package:wh_app/sell_story.dart';
 
 class home extends StatefulWidget{
@@ -17,9 +19,9 @@ class _home extends State<home>{
   List<Widget> tabs = [
   homeactivity(),
   sell_story(),
-  login(),
-  login(),
-  login(),
+  mystory(),
+  marketplace(),
+  Center(child: Text('account')),
     // home_activity(),
     // news(),
     // portfolio(),

@@ -28,8 +28,14 @@ class _homeac extends State<homeactivity> {
   Widget build(BuildContext context) {
      return Scaffold(
        appBar:  AppBar(
+         centerTitle: true,
          backgroundColor: Colors.transparent,
          elevation: 0.0,
+         title: Text("My Home",style: TextStyle(
+           fontSize: 22,
+           fontWeight: FontWeight.bold,
+           fontFamily: "poppins",
+         ),),
          leading: Padding(
            padding: const EdgeInsets.only(left: 15.0),
            child: LimitedBox(

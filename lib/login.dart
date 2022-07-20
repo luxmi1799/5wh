@@ -78,16 +78,19 @@ class _login extends State<login> {
                   height: 100,
                 ),
 
-                Center(
+                Padding(
+                  padding: const EdgeInsets.only(left: 25,right: 25,top: 10,bottom: 10),
                   child: Text("Login to Continue",style: TextStyle(
-                    fontSize: 29,
-                    color: Colors.black
+                    fontSize: 35,
+                    color: Colors.black,
+                    fontFamily: "poppins",
+                    fontWeight: FontWeight.bold
                   ),),
                 ),
 
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 25,right: 25,top: 50,bottom: 10),
+                  padding: const EdgeInsets.only(left: 25,right: 25,top: 40,bottom: 10),
                   child: TextField(
                     decoration: new InputDecoration(
                       focusedBorder: OutlineInputBorder(
