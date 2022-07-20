@@ -188,7 +188,7 @@ class _marketplace extends State<marketplace> {
                                     onTap: (){
 
                                     },
-                                    child: video_list(context,index));
+                                    child: audio_list(context,index));
                               }),
                         ),
                       ],
@@ -206,7 +206,7 @@ class _marketplace extends State<marketplace> {
       padding: const EdgeInsets.all(12.0),
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 220,
+        height: 210,
         decoration: BoxDecoration(
             color: Color(0xffFBFBFB),
             borderRadius: BorderRadius.circular(15),
@@ -223,7 +223,7 @@ class _marketplace extends State<marketplace> {
                   padding: const EdgeInsets.all(10.0),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("assets/story.png",width: 140,height: 120,fit: BoxFit.cover,)),
+                      child: Image.asset("assets/story.png",width: 140,height: 110,fit: BoxFit.cover,)),
                 ),
 
                 Column(
@@ -251,7 +251,7 @@ class _marketplace extends State<marketplace> {
                         ),
 
                         SizedBox(
-                          width: 50,
+                          width: 60,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 5.0),
@@ -266,7 +266,7 @@ class _marketplace extends State<marketplace> {
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 5.0),
+                      padding: const EdgeInsets.only(top: 5.0,bottom: 4),
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width *0.45,
                         child: Text("Showcasing art works at Brahmaputra heritage centre",
@@ -378,11 +378,11 @@ class _marketplace extends State<marketplace> {
                   padding: const EdgeInsets.only(top: 5.0,bottom: 5,left: 5),
                   child: Row(
                     children: [
-                      Image.asset("assets/likep.png",width: 45,height: 45,fit: BoxFit.cover,),
+                      Image.asset("assets/likep.png",width: 40,height: 40,fit: BoxFit.cover,),
                       SizedBox(
-                          width: 80,
+                          width: 70,
                           child: Text("Shyam Harichakra",style: TextStyle(
-                              fontSize: 12,
+                              fontSize: 10,
                               fontFamily: "poppins"
                           ),))
                     ],
@@ -538,12 +538,12 @@ class _marketplace extends State<marketplace> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 4.2),
+                  padding: const EdgeInsets.only(left: 8),
                   child: Icon(Icons.thumb_up,color: Color(0xff21AE2F),size: 17,),
                 ),
 
                 Padding(
-                  padding: const EdgeInsets.only(left: 2),
+                  padding: const EdgeInsets.only(left: 1),
                   child: SizedBox(
                     width: 40,
                     child: InkWell(
@@ -646,6 +646,35 @@ class _marketplace extends State<marketplace> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset("assets/videobtn.png",width: 90,height: 90,)
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget audio_list(BuildContext context,int pos){
+
+    return Padding(
+      padding: const EdgeInsets.symmetric(vertical: 15.0,horizontal: 15),
+      child: Container(
+        height: 280,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(imglist[pos]),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.circular(12),
+        ),
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            color: Colors.black.withOpacity(.55),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(Icons.music_video,color: Color(0xffFFDB43),size: 90,)
             ],
           ),
         ),

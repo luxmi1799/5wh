@@ -112,6 +112,7 @@ class _MyHomePageState extends State<MyHomePage>  with TickerProviderStateMixin{
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  SizedBox(width: 50,),
                   Image.asset("assets/miniglobe.png",width: 100,height: 100,) ,
                   Text("5WH",style: TextStyle(
                       fontSize: 30,
