@@ -1,10 +1,12 @@
 import 'package:custom_navigation_bar/custom_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:wh_app/create_story.dart';
 import 'package:wh_app/homeactivity.dart';
 import 'package:wh_app/login.dart';
 import 'package:wh_app/marketplace.dart';
 import 'package:wh_app/mystory.dart';
+import 'package:wh_app/profile.dart';
 import 'package:wh_app/sell_story.dart';
 
 class home extends StatefulWidget{
@@ -18,15 +20,10 @@ class _home extends State<home>{
   int _currentIndex = 0;
   List<Widget> tabs = [
   homeactivity(),
-  sell_story(),
+  create_story(),
   mystory(),
   marketplace(),
-  Center(child: Text('account')),
-    // home_activity(),
-    // news(),
-    // portfolio(),
-    // profile(),
-    // wallet(),
+  profile(),
   ];
 
   onTapped(int index) {

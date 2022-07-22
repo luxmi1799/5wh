@@ -57,7 +57,7 @@ class _login extends State<joinus> {
             elevation: 0.0,
           ),
           body:
-          //SingleChildScrollView(child:
+          SingleChildScrollView(child:
           Column(
             children: [
               Row(
@@ -184,7 +184,7 @@ class _login extends State<joinus> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Personal",
+                              Text("Journalist",
                                 style: TextStyle(
                                   color: Colors.black,
                                     fontSize: 14,
@@ -242,7 +242,7 @@ class _login extends State<joinus> {
 
             ],
           ),
-          //),
+          ),
         ),
       ],
     );

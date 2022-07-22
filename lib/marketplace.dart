@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:wh_app/mystory.dart';
+import 'package:wh_app/story_details.dart';
 
 
 List imglist = [
@@ -88,7 +89,7 @@ class _marketplace extends State<marketplace> {
                           children: [
                             Icon(Icons.picture_in_picture_sharp,size: 18,),
                             const SizedBox(width: 3),
-                            Text('Pictures'),
+                            Expanded(child: Text('Picture')),
                           ],
                         ),
                       ),
@@ -206,7 +207,7 @@ class _marketplace extends State<marketplace> {
       padding: const EdgeInsets.all(12.0),
       child: Container(
         width: MediaQuery.of(context).size.width,
-        height: 210,
+        height: 215,
         decoration: BoxDecoration(
             color: Color(0xffFBFBFB),
             borderRadius: BorderRadius.circular(15),
@@ -223,11 +224,11 @@ class _marketplace extends State<marketplace> {
                   padding: const EdgeInsets.all(10.0),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(10),
-                      child: Image.asset("assets/story.png",width: 140,height: 110,fit: BoxFit.cover,)),
+                      child: Image.asset("assets/story.png",width: MediaQuery.of(context).size.width*0.32,height: 100,fit: BoxFit.cover,)),
                 ),
 
                 Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Row(
@@ -255,40 +256,45 @@ class _marketplace extends State<marketplace> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(right: 5.0),
-                          child: Text("₹ 100",style: TextStyle(
-                              fontFamily: "poppins",
-                              color: Color(0xffFFDB43),
-                              fontSize: 14,
-                              fontWeight: FontWeight.bold
-                          ),),
+                          child: Expanded(
+                            child: Text("₹ 100",style: TextStyle(
+                                fontFamily: "poppins",
+                                color: Color(0xffFFDB43),
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold
+                            ),),
+                          ),
                         ),
                       ],
                     ),
 
                     Padding(
-                      padding: const EdgeInsets.only(top: 5.0,bottom: 4),
+                      padding: const EdgeInsets.only(top: 5.0,bottom: 2),
                       child: SizedBox(
                         width: MediaQuery.of(context).size.width *0.45,
-                        child: Text("Showcasing art works at Brahmaputra heritage centre",
-                          // textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontFamily: "poppins",
-                              color: Colors.black,
-                              fontSize: 13,
-                              fontWeight: FontWeight.bold
-                          ),),
+                        child: Expanded(
+                          child: Text("Showcasing art works at Brahmaputra heritage centre",
+                            // textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontFamily: "poppins",
+                                color: Colors.black,
+                                fontSize: 13,
+                                fontWeight: FontWeight.bold
+                            ),),
+                        ),
                       ),
                     ),
 
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         RichText(
                           text:TextSpan(
                               children:[
                                 WidgetSpan(
                                   child: Padding(
-                                    padding: EdgeInsets.symmetric(vertical:5.0,),
+                                    padding: EdgeInsets.symmetric(vertical:3.0,),
                                     child: CircleAvatar(
                                       radius:4,
                                       backgroundColor:Color(0xffFFDB43),
@@ -299,7 +305,7 @@ class _marketplace extends State<marketplace> {
                                   text:" English",
                                   style:TextStyle(
                                       color:Colors.black,
-                                      fontSize: 12
+                                      fontSize: 10
                                   ),
                                 ),
                               ]
@@ -313,7 +319,7 @@ class _marketplace extends State<marketplace> {
                                 children:[
                                   WidgetSpan(
                                     child: Padding(
-                                      padding: EdgeInsets.symmetric(vertical:5.0,),
+                                      padding: EdgeInsets.symmetric(vertical:3.0,),
                                       child: CircleAvatar(
                                         radius:4,
                                         backgroundColor:Color(0xffFFDB43),
@@ -324,7 +330,7 @@ class _marketplace extends State<marketplace> {
                                     text:" Jun 5, 2022",
                                     style:TextStyle(
                                         color:Colors.black,
-                                        fontSize: 12
+                                        fontSize: 10
                                     ),
                                   ),
                                 ]
@@ -333,26 +339,28 @@ class _marketplace extends State<marketplace> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 3.0),
-                          child: RichText(
-                            text:TextSpan(
-                                children:[
-                                  WidgetSpan(
-                                    child: Padding(
-                                      padding: EdgeInsets.symmetric(vertical:5.0,),
-                                      child: CircleAvatar(
-                                        radius:4,
-                                        backgroundColor:Color(0xffFFDB43),
+                          child: Expanded(
+                            child: RichText(
+                              text:TextSpan(
+                                  children:[
+                                    WidgetSpan(
+                                      child: Padding(
+                                        padding: EdgeInsets.symmetric(vertical:3.0,),
+                                        child: CircleAvatar(
+                                          radius:4,
+                                          backgroundColor:Color(0xffFFDB43),
+                                        ),
                                       ),
                                     ),
-                                  ),
-                                  TextSpan(
-                                    text:" Guwahati",
-                                    style:TextStyle(
-                                        color:Colors.black,
-                                        fontSize: 12
+                                    TextSpan(
+                                      text:" Guwahati",
+                                      style:TextStyle(
+                                          color:Colors.black,
+                                          fontSize: 10
+                                      ),
                                     ),
-                                  ),
-                                ]
+                                  ]
+                              ),
                             ),
                           ),
                         ),
@@ -375,12 +383,12 @@ class _marketplace extends State<marketplace> {
             Row(
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(top: 5.0,bottom: 5,left: 5),
+                  padding:  EdgeInsets.only(top: 5.0,bottom: 5,left: 5,right: MediaQuery.of(context).size.width*0.1),
                   child: Row(
                     children: [
                       Image.asset("assets/likep.png",width: 40,height: 40,fit: BoxFit.cover,),
                       SizedBox(
-                          width: 70,
+                          width: MediaQuery.of(context).size.width*0.15,
                           child: Text("Shyam Harichakra",style: TextStyle(
                               fontSize: 10,
                               fontFamily: "poppins"
@@ -537,30 +545,43 @@ class _marketplace extends State<marketplace> {
 
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: Icon(Icons.thumb_up,color: Color(0xff21AE2F),size: 17,),
-                ),
-
-                Padding(
-                  padding: const EdgeInsets.only(left: 1),
-                  child: SizedBox(
-                    width: 40,
-                    child: InkWell(
-                      child: Text("Show more",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontFamily: "poppins",
-                          color: Colors.black,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 10,
-                        ),),
-                    ),
-                  ),
-                )
-
               ],
-            )
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0,right: 10),
+              child: Row(
+                // mainAxisSize: MainAxisSize.min,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(0),
+                    child: Icon(Icons.thumb_up,color: Color(0xff21AE2F),size: 19,),
+                  ),
+
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 5),
+                    child: SizedBox(
+                      child: InkWell(
+                        onTap: (){
+                          Navigator.of(context).push(MaterialPageRoute(builder: (context) => story_detals()));
+                        },
+                        child: Expanded(
+                          child: Text("Show more",
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                              fontFamily: "poppins",
+                              color: Colors.black,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 12,
+                            ),),
+                        ),
+                      ),
+                    ),
+                  )
+
+                ],
+              ),
+            ),
 
           ],
         ),
@@ -573,7 +594,7 @@ class _marketplace extends State<marketplace> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15.0,horizontal: 15),
       child: Container(
-            height: 280,
+            height: 240,
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(imglist[pos]),
@@ -629,7 +650,7 @@ class _marketplace extends State<marketplace> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15.0,horizontal: 15),
       child: Container(
-        height: 280,
+        height: 240,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imglist[pos]),
@@ -658,7 +679,7 @@ class _marketplace extends State<marketplace> {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 15.0,horizontal: 15),
       child: Container(
-        height: 280,
+        height: 240,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage(imglist[pos]),
