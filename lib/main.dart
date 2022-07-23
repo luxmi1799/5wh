@@ -70,7 +70,7 @@ class _MyHomePageState extends State<MyHomePage>  with TickerProviderStateMixin{
                     child: Image.asset(
                         'assets/halfcircle.png',
                         width:MediaQuery.of(context).size.width * 0.85,
-                        height: 400,
+                        // height: 300,
                         fit: BoxFit.cover),
                   ),
 
@@ -79,10 +79,22 @@ class _MyHomePageState extends State<MyHomePage>  with TickerProviderStateMixin{
                     right: -20,
                     child: Align(
                       alignment: Alignment.bottomRight,
-                      child: Image.asset(
-                          'assets/bottombg1.png',
-                          width:250,
-                          fit: BoxFit.cover),
+                      child: Container(
+                       // width:20,
+                        decoration: BoxDecoration(
+                          // image: DecorationImage(
+                          //   image: AssetImage("assets/bottombg1.png"),
+                          //   fit: BoxFit.cover,
+                          // ),
+                         shape: BoxShape.circle,
+                         color: Colors.black.withOpacity(0.5),
+                        ),
+                        child: Image.asset(
+                            'assets/bottombg1.png',
+                             width:200,
+                           fit: BoxFit.cover
+                        ),
+                      ),
                     ),
                   ),
 

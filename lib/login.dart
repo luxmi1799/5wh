@@ -41,7 +41,7 @@ class _login extends State<login> {
                     child: Align(
                       alignment: Alignment.bottomRight,
                       child: Image.asset(
-                          'assets/bottimlogin.png',
+                          'assets/greybottom.png',
                           width:250,
                           fit: BoxFit.cover),
                     ),
@@ -59,7 +59,8 @@ class _login extends State<login> {
             elevation: 0.0,
           ),
           body:
-         //SingleChildScrollView(child:
+         SingleChildScrollView(
+           child:
             Column(
               children: [
                 Row(
@@ -75,13 +76,13 @@ class _login extends State<login> {
                 ),
 
                 SizedBox(
-                  height: 100,
+                  height: 70,
                 ),
 
                 Padding(
                   padding: const EdgeInsets.only(left: 25,right: 25,top: 10,bottom: 10),
                   child: Text("Login to Continue",style: TextStyle(
-                    fontSize: 35,
+                    fontSize: 34,
                     color: Colors.black,
                     fontFamily: "poppins",
                     fontWeight: FontWeight.bold
@@ -101,7 +102,7 @@ class _login extends State<login> {
                         borderSide: BorderSide(color: Color(0xffFFDB43), width: 1.5),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      hintText: "Username",
+                      hintText: "Username / Email ID",
                       hintStyle: TextStyle(
                           color: Colors.grey[600],
                           fontSize: 15,
@@ -130,7 +131,7 @@ class _login extends State<login> {
                         borderSide: BorderSide(color: Color(0xffFFDB43), width: 1.5),
                         borderRadius: BorderRadius.circular(10),
                       ),
-                      hintText: "Email Address",
+                      hintText: "Password",
                       hintStyle: TextStyle(
                           color: Colors.grey[600],
                           fontSize: 15,
@@ -248,7 +249,7 @@ class _login extends State<login> {
                   //     child: FittedBox(child: Image.asset("assets/bottimlogin.png",fit: BoxFit.fill,width: 260,))),
               ],
             ),
-          //),
+         ),
         ),
       ],
     );

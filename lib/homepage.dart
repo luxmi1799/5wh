@@ -46,7 +46,7 @@ class _home extends State<home>{
       // showUnselectedLabels: false,
       landscapeLayout: BottomNavigationBarLandscapeLayout.centered,
       selectedLabelStyle: TextStyle(
-        fontSize: 12,
+        fontSize: 11,
       ),
       currentIndex: _currentIndex,
       type: BottomNavigationBarType.fixed,
@@ -58,14 +58,14 @@ class _home extends State<home>{
           icon: Icon(
             Icons.home,
             // color: Colors.white,
-            size: 30,
+            size: 28,
           ),
           label: "Home",
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
               'assets/sale.svg',
-            width: 30,
+            width: 28,
             color: _currentIndex == 1 ? Color(0xffECAE0F) : Colors.black,
               ),
           label: "Sell Story",
@@ -73,14 +73,14 @@ class _home extends State<home>{
         BottomNavigationBarItem(
           icon: Icon(
              Icons.people,          // color: Colors.white,
-            size: 30,
+            size: 28,
           ),
           label: "My Story",
         ),
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             'assets/market.svg',
-            width: 30,
+            width: 28,
             color: _currentIndex == 3 ? Color(0xffECAE0F) : Colors.black,
           ),
 
@@ -89,7 +89,7 @@ class _home extends State<home>{
         BottomNavigationBarItem(
           icon: SvgPicture.asset(
             'assets/setting.svg',
-            width: 30,
+            width: 28,
             color: _currentIndex == 4 ? Color(0xffECAE0F) : Colors.black,
 
           ),

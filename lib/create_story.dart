@@ -72,7 +72,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -157,13 +157,13 @@ class _create_story extends State<create_story> {
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0),
                         borderSide: BorderSide(
-                          color: Color(0xffFFB700),
+                          color: Color(0xffFFDB43),
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(8.0),
                         borderSide: BorderSide(
-                          color: Color(0xffFFB700),
+                          color: Color(0xffFFDB43),
                           width: 1,
                         ),
                       ),
@@ -182,7 +182,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -248,7 +248,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -314,7 +314,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -380,7 +380,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -446,7 +446,7 @@ class _create_story extends State<create_story> {
                     // padding: const EdgeInsets.all(3.0),
                     decoration: BoxDecoration(
                       border: Border.all(
-                        color:  Color(0xffFFB700),width: 1,
+                        color:  Color(0xffFFDB43),width: 1,
                       ),
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -531,13 +531,13 @@ class _create_story extends State<create_story> {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide(
-                      color: Color(0xffFFB700),
+                      color: Color(0xffFFDB43),
                     ),
                   ),
                   enabledBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8.0),
                     borderSide: BorderSide(
-                      color: Color(0xffFFB700),
+                      color: Color(0xffFFDB43),
                       width: 1,
                     ),
                   ),
@@ -618,7 +618,7 @@ class _create_story extends State<create_story> {
                       ),),
 
                       Padding(
-                        padding: const EdgeInsets.only(top: 50.0,left: 15,right: 15,bottom: 15),
+                        padding: const EdgeInsets.only(top: 40.0,left: 15,right: 15,bottom: 15),
                         child: DottedBorder(
                             borderType: BorderType.RRect,
                             radius: Radius.circular(20),
@@ -731,7 +731,7 @@ class _create_story extends State<create_story> {
                       ),),
 
                       Padding(
-                        padding: const EdgeInsets.only(top: 50.0,left: 15,right: 15,bottom: 15),
+                        padding: const EdgeInsets.only(top: 40.0,left: 15,right: 15,bottom: 15),
                         child: DottedBorder(
                           borderType: BorderType.RRect,
                           radius: Radius.circular(20),
@@ -844,7 +844,7 @@ class _create_story extends State<create_story> {
                       ),),
 
                       Padding(
-                        padding: const EdgeInsets.only(top: 50.0,left: 15,right: 15,bottom: 15),
+                        padding: const EdgeInsets.only(top: 40.0,left: 15,right: 15,bottom: 15),
                         child: DottedBorder(
                           borderType: BorderType.RRect,
                           radius: Radius.circular(20),

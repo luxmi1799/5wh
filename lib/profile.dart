@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:wh_app/create_assessment.dart';
+import 'package:wh_app/create_blog.dart';
+import 'package:wh_app/create_content.dart';
+import 'package:wh_app/create_content_photo.dart';
+import 'package:wh_app/create_content_video.dart';
+import 'package:wh_app/create_story.dart';
 import 'package:wh_app/edit_profile.dart';
+import 'package:wh_app/schdle_streaming.dart';
 
 class profile extends StatefulWidget{
   @override
@@ -16,6 +24,8 @@ class _profile extends State<profile> {
   bool blog = false;
   bool assisn = false;
   bool contract = false;
+  final Future<SharedPreferences> _prefs = SharedPreferences.getInstance();
+
   @override
   Widget build(BuildContext context) {
      return Scaffold(
@@ -201,14 +211,37 @@ class _profile extends State<profile> {
                    ),
                    Padding(
                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
+                     child: InkWell(
+                       onTap: (){
+                         Navigator.of(context).push(MaterialPageRoute(builder: (context) => create_content_photo()));
+                       },
+                       child: Row(
+                         children: [
+                           Text("Photo",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ],
+                       ),
+                     ),
+                   ),
+                   Padding(
+                     padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                      child: Row(
                        children: [
-                         Text("Photo",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
+                         InkWell(
+                           onTap: (){
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => create_content_video()));
+                           },
+                           child: Text("Video",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ),
                        ],
                      ),
                    ),
@@ -216,25 +249,17 @@ class _profile extends State<profile> {
                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                      child: Row(
                        children: [
-                         Text("Video",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
-                       ],
-                     ),
-                   ),
-                   Padding(
-                     padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
-                     child: Row(
-                       children: [
-                         Text("Audio",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
+                         InkWell(
+                           onTap: (){
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => create_content_audio()));
+                           },
+                           child: Text("Audio",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ),
                        ],
                      ),
                    ),
@@ -309,12 +334,17 @@ class _profile extends State<profile> {
                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                      child: Row(
                        children: [
-                         Text("Schedule Streaming",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
+                         InkWell(
+                           onTap:(){
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context) => streaming()));
+                           },
+                           child: Text("Schedule Streaming",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ),
                          Spacer(),
                        ],
                      ),
@@ -480,12 +510,17 @@ class _profile extends State<profile> {
                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                      child: Row(
                        children: [
-                         Text("Create Blog",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
+                         InkWell(
+                           onTap:(){
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context)=> create_blog()));
+                           },
+                           child: Text("Create Blog",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ),
                          Spacer(),
                        ],
                      ),
@@ -558,12 +593,17 @@ class _profile extends State<profile> {
                      padding: const EdgeInsets.symmetric(horizontal: 20.0,vertical: 5),
                      child: Row(
                        children: [
-                         Text("Create Assignment",style: TextStyle(
-                             fontFamily: "poppins",
-                             color: Colors.black,
-                             fontSize: 18,
-                             fontWeight: FontWeight.bold
-                         ),),
+                         InkWell(
+                           onTap:(){
+                             Navigator.of(context).push(MaterialPageRoute(builder: (context)=> create_assmt()));
+                           },
+                           child: Text("Create Assignment",style: TextStyle(
+                               fontFamily: "poppins",
+                               color: Colors.black,
+                               fontSize: 18,
+                               fontWeight: FontWeight.bold
+                           ),),
+                         ),
                          Spacer(),
                        ],
                      ),

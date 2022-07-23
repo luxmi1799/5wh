@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'earning.dart';
+
 class sell_story extends StatefulWidget{
   @override
   State<StatefulWidget> createState() {
@@ -50,7 +52,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -136,13 +138,13 @@ class _sell_story extends State<sell_story> {
                        focusedBorder: OutlineInputBorder(
                          borderRadius: BorderRadius.circular(8.0),
                          borderSide: BorderSide(
-                           color: Color(0xffFFB700),
+                           color: Color(0xffFFDB43),
                          ),
                        ),
                        enabledBorder: OutlineInputBorder(
                          borderRadius: BorderRadius.circular(8.0),
                          borderSide: BorderSide(
-                           color: Color(0xffFFB700),
+                           color: Color(0xffFFDB43),
                            width: 1,
                          ),
                        ),
@@ -162,7 +164,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -228,7 +230,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -294,7 +296,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -360,7 +362,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -426,7 +428,7 @@ class _sell_story extends State<sell_story> {
                      // padding: const EdgeInsets.all(3.0),
                      decoration: BoxDecoration(
                        border: Border.all(
-                         color:  Color(0xffFFB700),width: 1,
+                         color:  Color(0xffFFDB43),width: 1,
                        ),
                        borderRadius: BorderRadius.circular(10),
                      ),
@@ -510,13 +512,13 @@ class _sell_story extends State<sell_story> {
                    focusedBorder: OutlineInputBorder(
                      borderRadius: BorderRadius.circular(8.0),
                      borderSide: BorderSide(
-                       color: Color(0xffFFB700),
+                       color: Color(0xffFFDB43),
                      ),
                    ),
                    enabledBorder: OutlineInputBorder(
                      borderRadius: BorderRadius.circular(8.0),
                      borderSide: BorderSide(
-                       color: Color(0xffFFB700),
+                       color: Color(0xffFFDB43),
                        width: 1,
                      ),
                    ),
@@ -536,6 +538,7 @@ class _sell_story extends State<sell_story> {
                    ),
                    child: FlatButton(
                      onPressed: (){
+                       Navigator.of(context).push(MaterialPageRoute(builder: (context) => earning()));
                      },
                      child: Text("SAVE & CONTINUE",
                        textAlign: TextAlign.center,

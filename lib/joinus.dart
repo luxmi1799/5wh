@@ -73,7 +73,7 @@ class _login extends State<joinus> {
               ),
 
               SizedBox(
-                height: 100,
+                height: 50,
               ),
 
               Center(
@@ -102,7 +102,7 @@ class _login extends State<joinus> {
                     });
                   },
                   child: Container(
-                    height: 130,
+                    height: 100,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -111,7 +111,7 @@ class _login extends State<joinus> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Stack(
                             alignment: Alignment.center,
@@ -125,22 +125,14 @@ class _login extends State<joinus> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Media House",
+                              Text("    Media House",
                               style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 14,
+                                fontSize: 18,
                                 fontWeight: FontWeight.bold
                               ),),
                               SizedBox(
                                 height: 8,
-                              ),
-                              SizedBox(
-                                width: 200,
-                                child: Text("You will need futher verification if you are from some media house.",
-                                  style: TextStyle(
-                                    color: Color(0xff383838),
-                                    fontSize: 12,
-                                  ),),
                               ),
                             ],
                           ),
@@ -161,7 +153,7 @@ class _login extends State<joinus> {
                     });
                   },
                   child: Container(
-                    height: 130,
+                    height: 100,
                     width: MediaQuery.of(context).size.width,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
@@ -170,7 +162,7 @@ class _login extends State<joinus> {
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
+                        mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Stack(
                             alignment: Alignment.center,
@@ -184,22 +176,14 @@ class _login extends State<joinus> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text("Journalist",
+                              Text("    Journalist",
                                 style: TextStyle(
                                   color: Colors.black,
-                                    fontSize: 14,
+                                    fontSize: 18,
                                     fontWeight: FontWeight.bold
                                 ),),
                               SizedBox(
                                 height: 8,
-                              ),
-                              SizedBox(
-                                width: 200,
-                                child: Text("You can simply register yourself to get all the latest updates.",
-                                  style: TextStyle(
-                                    color: Color(0xff383838),
-                                    fontSize: 12,
-                                  ),),
                               ),
                             ],
                           ),

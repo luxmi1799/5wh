@@ -57,7 +57,7 @@ class _marketplace extends State<marketplace> {
                   height: 7,
                 ),
                 Container(
-                  height: 60,
+                  height: 55,
                   decoration: BoxDecoration(
                     color: Color(0xffFFDB43),
                   ),
@@ -76,9 +76,9 @@ class _marketplace extends State<marketplace> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.folder_copy_outlined,size: 18,),
-                            const SizedBox(width: 4),
-                            Text('Stories'),
+                            Icon(Icons.folder_copy_outlined,size: 17,),
+                            const SizedBox(width: 2),
+                            Expanded(child: Text('Storie')),
                           ],
                         ),
                       ),
@@ -87,9 +87,11 @@ class _marketplace extends State<marketplace> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.picture_in_picture_sharp,size: 18,),
-                            const SizedBox(width: 3),
-                            Expanded(child: Text('Picture')),
+                            Icon(Icons.picture_in_picture_sharp,size: 17,),
+                            const SizedBox(width: 2),
+                            Expanded(child: Text('Picture',style: TextStyle(
+                              fontSize: 12
+                            ),)),
                           ],
                         ),
                       ),
@@ -98,9 +100,11 @@ class _marketplace extends State<marketplace> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.video_collection_sharp,size: 18,),
-                            const SizedBox(width: 3),
-                            Text('Videos'),
+                            Icon(Icons.video_collection_sharp,size: 17,),
+                            const SizedBox(width: 2),
+                            Expanded(child: Text('Video',style: TextStyle(
+                                fontSize: 12
+                            ),)),
                           ],
                         ),
                       ),
@@ -108,9 +112,11 @@ class _marketplace extends State<marketplace> {
                         child: Row(
                           mainAxisSize: MainAxisSize.min,
                           children: [
-                            Icon(Icons.mic,size: 18,),
-                            const SizedBox(width: 3),
-                            Text('Audio'),
+                            Icon(Icons.mic,size: 17,),
+                            const SizedBox(width: 2),
+                            Expanded(child: Text('Audio',style: TextStyle(
+                                fontSize: 12
+                            ),)),
                           ],
                         ),
                       ),
@@ -259,7 +265,7 @@ class _marketplace extends State<marketplace> {
                           child: Expanded(
                             child: Text("₹ 100",style: TextStyle(
                                 fontFamily: "poppins",
-                                color: Color(0xffFFDB43),
+                                color: Colors.black,
                                 fontSize: 14,
                                 fontWeight: FontWeight.bold
                             ),),
